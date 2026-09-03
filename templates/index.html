@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    
+    <title>Random Quote Generator</title>
+</head>
+<body>
+    <h2>Random Quote Generator</h2><br><br>
+    <div class="card">
+        <p class="quote">"{{ quote }}"</p>
+        <p class="author">- {{ author }}</p>
+        <a href="/" class="btn">New Quote</a>
+        <a href="{{ url_for('history') }}" class="btn history-btn">History</a>
+    </div>
+</body>
+</html>

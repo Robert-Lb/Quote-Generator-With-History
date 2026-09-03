@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}"> 
+    <title>Quotes History</title>
+</head>
+<body>
+    <a href="/" class="btn">Home</a>
+    <h2>Quotes History</h2><br>
+    <ul>
+        {% for quotes in quotes %}
+        <li>
+            <span class="quote">"{{ quotes.1 }}"</span><br>
+            <span class="author">- {{ quotes.2 }}</span>
+            <span class="time">Saved at: {{ quotes.3 }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
